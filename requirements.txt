@@ -1,7 +1,7 @@
 python-dotenv
 pandas
 numpy
-pymango
+pymongo[srv]>=4.0
 scikit-learn
 scipy
 matplotlib
