@@ -7,5 +7,6 @@ scipy
 matplotlib
 seaborn
 certifi
-
+dill
+pyaml
 # -e .
