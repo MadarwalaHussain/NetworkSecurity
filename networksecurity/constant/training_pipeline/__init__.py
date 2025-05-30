@@ -55,3 +55,19 @@ DATA_TRANSFORMATION_IMPUTER_PARAMS= {
     "n_neighbors": 3,
     "weights": "uniform",
 }
+
+DATA_TRANSFORMAION_TRAIN_FILE_PATH  = 'train.npy'
+DATA_TRANSFORMAION_TEST_FILE_PATH  = 'test.npy'
+
+
+"""
+Model Trainer related constant start with MODEL_TRAINER VAR NAME
+"""
+MODEL_TRAINER_DIR_NAME = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME = "model.pkl"
+MODEL_TRAINER_EXPECTED_ACCURACY = 0.6
+MODEL_TRAINER_OVERFITTING_UNDER_FITTING_THRESHOLD = 0.05
+SAVED_MODEL_DIR = os.path.join("saved_models")
+SAVED_MODEL_FILE_NAME = "model.pkl"
+
