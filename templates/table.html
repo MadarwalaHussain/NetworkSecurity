@@ -1,0 +1,17 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+        <style>
+            .table-container {
+                max-height: 400px;
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h2> Predicted Data </h2>
+        {{ table | safe }}
+    </body>
+</html>

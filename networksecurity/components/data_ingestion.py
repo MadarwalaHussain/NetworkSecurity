@@ -2,7 +2,7 @@ from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 
 # Importing Data Ingestion configuration
-from networksecurity.entity.config_entity import DataIngestionCofig
+from networksecurity.entity.config_entity import DataIngestionConfig
 from networksecurity.entity.artifact_entity import DataIngestionArtifact
 import os
 import sys
@@ -16,7 +16,7 @@ load_dotenv()
 MONGO_DB_URL = os.getenv("MONGO_DB_URL")
 
 class DataIngestion:
-    def __init__(self, data_ingestion_config: DataIngestionCofig):
+    def __init__(self, data_ingestion_config: DataIngestionConfig):
         try:
             self.data_ingestion_config = data_ingestion_config
             self.client = pymongo.MongoClient(MONGO_DB_URL)

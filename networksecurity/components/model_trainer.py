@@ -20,6 +20,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import r2_score
 import mlflow
 import mlflow.sklearn
+import dagshub
+# dagshub.init(repo_owner='MadarwalaHussain', repo_name='NetworkSecurity', mlflow=True)
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
@@ -116,6 +118,7 @@ class ModelTrainer:
             save_object(file_path=self.model_trainer_config.trained_model_file_path, obj=network_model)
             logging.info(f"Trained model saved at: {self.model_trainer_config.trained_model_file_path}")
 
+            save_object('final_models/model.pkl', obj=best_model)
             # Create and return the ModelTrainerArtifact
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,

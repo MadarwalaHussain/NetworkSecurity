@@ -1,7 +1,7 @@
 from networksecurity.components.data_ingestion import DataIngestion
 from networksecurity.components.data_validation import DataValidation
 from networksecurity.components.data_transformation import DataTransformation
-from networksecurity.entity.config_entity import TrainingPipelineConfig, DataIngestionCofig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
+from networksecurity.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
 from networksecurity.components.model_trainer import ModelTrainer
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     try:
         # Initialize the training pipeline configuration
         training_pipeline_config = TrainingPipelineConfig()
-        data_ingestion_config = DataIngestionCofig(training_pipeline_config=training_pipeline_config)
+        data_ingestion_config = DataIngestionConfig(training_pipeline_config=training_pipeline_config)
         # Create a DataIngestion instance with the configuration
         data_ingestion = DataIngestion(data_ingestion_config=data_ingestion_config)
 

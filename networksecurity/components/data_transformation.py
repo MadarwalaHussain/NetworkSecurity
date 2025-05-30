@@ -104,6 +104,9 @@ class DataTransformation:
                 obj=data_transformation_pipeline
             )
 
+            save_object('final_models/preprocessing.pkl', obj=data_transformation_pipeline)
+            logging.info("Data transformation object saved successfully.")
+
             # Create and return the DataTransformationArtifact
             data_transformation_artifact = DataTransformationArtifact(
                 transformed_object_file_path=self.data_transformation_config.transformed_object_file_path,
