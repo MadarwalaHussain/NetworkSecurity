@@ -148,3 +148,18 @@
 ---
 
 **This problem represents a critical cybersecurity challenge where machine learning can provide automated, scalable protection against evolving phishing threats while maintaining user experience through minimal false positives.**
+
+** Docker Setup in Ec2 commands to be executed
+
+```
+sudo apt-get update -y
+sudo apt-get upgrade
+```
+Install Docker
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
