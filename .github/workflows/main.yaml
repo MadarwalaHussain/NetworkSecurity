@@ -93,6 +93,6 @@ jobs:
           echo "Docker container is running."
       - name: Clean previous containers
         run: |
-          echo "Cleaning up previous containers..."
+          echo "Cleaning up previous containers.."
           docker system prune -f
           echo "Previous containers cleaned up."
